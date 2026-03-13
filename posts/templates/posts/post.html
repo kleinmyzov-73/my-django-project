@@ -1,0 +1,15 @@
+{% extends 'posts/base.html' %}
+
+{% block content %}
+<div class="w3-row w3-center"> <div class="card w3-margin w3-white" style="width: auto; max-width: 900px; display: inline-block; text-align: left;">
+        <div class="container">
+            <h3><b>{{posts.title}}</b></h3>
+            <h5> to someone <span class="w3-opacity">{{posts.created_at}}</span></h5>
+            <hr>
+            <p style="white-space: pre-wrap;">{{posts.body}}</p> <div class="w3-padding-16">
+                <a href="{% url 'index' %}" class="w3-button w3-black">« Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
